@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define n 10
+int main()
+{
+	int d[n+1];
+	int i,j,t;
+	printf("please put in the score");
+	for(i=1;i<n;i++)
+	{
+		scanf("%d",&d[i]);
+	} 
+	printf("\n");
+	for(i=1;i<n;i++)
+	 for(j=i+1;j<n;j++)
+	 if(d[i]<d[j])
+	  {
+	  	t=d[i];
+	  	d[i]=d[j];
+	  	d[j]=t;
+	  }
+	  for(i=1;i<n;i++)
+	  {
+	  	printf("%d",d[i]);
+	  }
+	  printf("\n");
+	  return 0;
+}
